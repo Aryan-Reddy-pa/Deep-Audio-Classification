@@ -23,15 +23,17 @@ The notebook builds a dataset using folders of audio files.
 Each folder represents a class.
 Example structure:
 dataset/
- ├── blues/
- ├── classical/
- ├── rock/
- └── jazz/
+
+ ├──  blues/
+ ├──  classical/
+ ├──  rock/
+ └──  jazz/
 The code loops through each folder, extracts features, and stores:
 X: spectrogram images
 y: class labels
 Labels are one-hot encoded using to_categorical.
-5. Train–Test Split
+
+6. Train–Test Split
 The dataset is split into training and testing sets using:
 
 train_test_split(data, labels, test_size=0.2, random_state=42)
@@ -55,11 +57,13 @@ The project includes:
 Training history
 Visualizations (accuracy and loss curves)
 training_hist.json is saved so results can be loaded later.
-9. Prediction
+
+10. Prediction
    
 After training, the model can classify any new audio file.
 The audio undergoes the same preprocessing steps before being passed to the model.
 Dependencies
+
 Install required packages:
 pip install librosa tensorflow matplotlib seaborn numpy scikit-learn
 
